@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+	<!-- This form is incomplete. It will not send the request properly and has missing components.  Add the necessary fields to complete the form.  -->
+	<form>
+	     <div style="margin: 10px 0px">
+			<label>Total Interest ($): </label><br/>
+			<input name="total" placeholder="Amount Invested" value="{{total}}" {%if calc_total %}disabled{% endif %}/>
+		</div>
+		<div style="margin: 10px 0px">
+			<button type="submit">Submit</button>
+		</div>
+	</form>
+</div>
+<div>
+	{{message}}
+</div>
+<a href="{{url_for('credits')}}">Credits Page</a>
+{% endblock %}
